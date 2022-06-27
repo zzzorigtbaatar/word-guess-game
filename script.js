@@ -43,9 +43,11 @@ function displayScores() {
 }
 
 //displays the secret word as underscores initially and then reveals letters if correctly pressed
-function displaySecretWord() {
+var secretWord = function displaySecretWord(currentWord) {
 
 }
+
+document.getElementById("wordscreen").innerHTML = secretWord;
 
 // begins timer until it reaches 0.
 function startTimer() {
