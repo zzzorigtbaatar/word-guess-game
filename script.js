@@ -36,7 +36,7 @@ function displayScores(){
     var latestWinScore = JSON.parse(localStorage.getItem("playerStringified")).winScore;
     var latestLossScore = JSON.parse(localStorage.getItem("playerStringified")).lossScore;
 
-    if (localStorage.getItem("playerWins") !==){
+    if (localStorage.getItem("playerWins") !== null){
         document.getElementById("winsText").textContent = latestWinScore;
         document.getElementById("lossesText").textContent = latestLossScore;
     }
