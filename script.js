@@ -13,7 +13,7 @@ var player = {
 localStorage.setItem("playerStringified", JSON.stringify(player));
 
 //starts the game
-function init(){
+function init() {
     resetTimer();
     displayTimer();
     displayScores();
@@ -22,41 +22,41 @@ function init(){
 
 
 //resets timer to 1 minute/60000 milliseconds
-function resetTimer(){
+function resetTimer() {
     timerLimit = 60000;
 }
 
 //displays the current time on timer
-function displayTimer(){
-
+function displayTimer() {
+    document.getElementById("#timer").textContent = "You have " + timerLimit + " milliseconds.";
 }
 
 //displays the locally stored scores, if there is any.
-function displayScores(){
+function displayScores() {
     var latestWinScore = JSON.parse(localStorage.getItem("playerStringified")).winScore;
     var latestLossScore = JSON.parse(localStorage.getItem("playerStringified")).lossScore;
 
-    if (localStorage.getItem("playerWins") !== null){
-        document.getElementById("winsText").textContent = latestWinScore;
-        document.getElementById("lossesText").textContent = latestLossScore;
+    if (localStorage.getItem("playerWins") !== null) {
+        document.getElementById("#winsText").textContent = latestWinScore;
+        document.getElementById("#lossesText").textContent = latestLossScore;
     }
 }
 
 //displays the secret word as underscores initially and then reveals letters if correctly pressed
-function displaySecretWord(){
+function displaySecretWord() {
 
 }
 
 // begins timer until it reaches 0.
-function startTimer(){
-    for (var i = timerLimit; i > 0; i - 1000){
+function startTimer() {
+    for (var i = timerLimit; i > 0; i - 1000) {
         // timerText = "There are " + timerLimit + " milliseconds left!";
         document.getElementById("#timer").textContent = "There are " + timerLimit + " milliseconds left!";
     }
-    if (timerLimit === 0){
+    if (timerLimit === 0) {
         document.getElementById("#timer").textContent = "Time's Up!";
     }
-    
+
 }
 
 
