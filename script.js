@@ -3,8 +3,14 @@ var timerLimit = 60000;
 var timerText = "";
 
 
-//Create object for player?
+//object for player
+var player = {
+    winScore: winScore.value,
+    lossScore: lossScore.value,
+}
 
+// set object to local storage
+localStorage.setItem("playerStringified", JSON.stringify(player));
 
 //starts the game
 function init(){
@@ -27,7 +33,13 @@ function displayTimer(){
 
 //displays the locally stored scores, if there is any.
 function displayScores(){
+    var latestWinScore = JSON.parse(localStorage.getItem("playerStringified")).winScore;
+    var latestLossScore = JSON.parse(localStorage.getItem("playerStringified")).lossScore;
 
+    if (localStorage.getItem("playerWins") !==){
+        document.getElementById("winsText").textContent = latestWinScore;
+        document.getElementById("lossesText").textContent = latestLossScore;
+    }
 }
 
 //displays the secret word as underscores initially and then reveals letters if correctly pressed
