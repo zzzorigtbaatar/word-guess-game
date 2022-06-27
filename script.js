@@ -41,7 +41,7 @@ function displayScores() {
         document.getElementById("#lossesText").textContent = latestLossScore;
     }
 }
-
+//testing branch stuff here
 //displays the secret word as underscores initially and then reveals letters if correctly pressed
 function displaySecretWord() {
 
