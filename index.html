@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Guess Game</title>
+    <title>Word Game</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
     <header>
-        <h1>Word Guess Game</h1>
-        <button id="startbutton">Start</button>
+        <h1 id = "bigTitle">Word Guess Game</h1>
+        <button class="start-button">Start</button>
     </header>
     <main>
         <div id="gamescreen">
             <span id="wordscreen"></span>
-
         </div>
         <div id="scorescreen">
             <div id="topscreen">
+
+                <div id="timerscreen">
+                    <span id="timer"></span>
+                </div>
+
                 <span id="winslosses">
                     <p>Wins: </p>
                     <span id="winsText"></span><br />
                     <p>Losses: </p>
                     <span id="lossesText"></span>
                 </span>
-                <span id="testspan">
-                    <h1>Win: Test</h1><br />
-                    <h1>Loss: Test</h1>
-                </span>
-            </div>
-            <div id="timerscreen">
-                <span id="timer"></span>
+
             </div>
         </div>
     </main>
-
 </body>
 <script src="script.js"></script>
 
