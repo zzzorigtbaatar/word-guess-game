@@ -87,11 +87,14 @@ function displayScores() {
 //resets timer to 1 minute/60000 milliseconds
 function resetTimer() {
     currentTime = timeLimit;
+    stopTimer = false;
 }
 
 // begins timer until it reaches 0.
 function startTimer() {
-    resetTimer();
+    if(gameOver){
+        resetTimer();
+    }
 
     setInterval(function () {
 
@@ -103,6 +106,7 @@ function startTimer() {
             document.getElementById("timer").innerHTML = "There are " + currentTime + " milliseconds left!";
             currentTime -= 1000;
         }
+        
 
     }, 1000);
 
@@ -134,6 +138,7 @@ init();
 startButton.addEventListener("click", function (event) {
     event.preventDefault();
     startTimer();
+    displayScores();
 });
 
 
