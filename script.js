@@ -41,7 +41,7 @@ function playerWon() {
     var latestWinScore = JSON.parse(localStorage.getItem("wins"));
     localStorage.setItem("wins", latestWinScore + 1);
     gameOver = true;
-    document.getElementById("bigTitle").innerHTML = "You won with " + currentTime + " milliseconds remaining!";
+    document.getElementById("bigTitle").innerHTML = "You won with " + currentTime + " seconds remaining!";
     console.log("playerWon was hit");
 
 }
@@ -58,7 +58,7 @@ function playerLost() {
 
 //Show timer text before it starts
 function displayTimer() {
-    document.getElementById("timer").innerHTML = "You only get " + timeLimit + " milliseconds.";
+    document.getElementById("timer").innerHTML = "You only get " + timeLimit + " seconds.";
 }
 
 //displays the secret word as underscores initially and then reveals letters if correctly pressed
@@ -85,7 +85,7 @@ function displayScores() {
     }
 }
 
-//resets timer to 1 minute/60000 milliseconds
+//resets timer to 1 minute/60000 seconds
 function resetTimer() {
     currentTime = timeLimit;
     stopTimer = false;
@@ -102,7 +102,7 @@ function startTimer() {
         if (currentTime === 0 && !stopTimer) {
             document.getElementById("timer").innerHTML = "Time's Up!";
         } else if (currentTime > 0 && !stopTimer) {
-            // timerText = "There are " + timerLimit + " milliseconds left!";
+            // timerText = "There are " + timerLimit + " seconds left!";
             checkStatus()
             document.getElementById("timer").innerHTML = "There are " + currentTime + " seconds left!";
             currentTime -= 1;
