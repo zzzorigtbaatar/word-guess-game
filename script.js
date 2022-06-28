@@ -24,6 +24,7 @@ function init() {
     displayScores();
     displaySecretWord();
     resetTimer();
+    //test
 }
 
 //Creates win and loss keys if there are none
